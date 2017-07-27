@@ -1,0 +1,6 @@
+framework module WalmartSDKKit {
+  umbrella header "WalmartSDKKit.h"
+
+  export *
+  module * { export * }
+}

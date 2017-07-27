@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,21 @@
 			<false/>
 		</dict>
 		<key>BrightFutures.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ISO8601.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,17 +67,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>02900825AF21D441DABF7CA5EF9CA921</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>02B0204CDC8FD53E98E321B036CB247E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>115FA0D867E07C04838493890DBD8D29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4551A02DCD158A5143D803E0FE76C4F6</key>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7736203EB64FA74F6CBB3A0D7E66175B</key>
+		<key>4551A02DCD158A5143D803E0FE76C4F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EAC2B67C252AB72C6B218CE08921E0C3</key>
+		<key>B91E6286F65DDF5328EB038CD5C90F5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F95F03D5202318ED70254B5EEA5FD431</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC3688684BF42A20A8998F31DDA51A49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1002825FECE7498D5B1D32E74C79448</key>
 		<dict>
 			<key>primary</key>
 			<true/>

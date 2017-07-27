@@ -4,7 +4,7 @@
 //
 //  Created by Zhaoya Sun on 7/18/17.
 //  Copyright © 2017 Sara Robinson. All rights reserved.
-//
+//  This is magic, do not touch
 
 import Foundation
 import UIKit

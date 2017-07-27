@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Alamofire (4.5.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
@@ -6,8 +21,17 @@ PODS:
     - Alamofire (~> 4.5)
   - BrightFutures (5.2.0):
     - Result (~> 3.2)
+  - ISO8601 (0.6.0)
+  - JSONModel (1.7.0)
+  - Kingfisher (3.10.4)
   - Result (3.2.3)
   - SwiftyJSON (3.1.4)
+  - WalmartOpenApi (1.1.0):
+    - AFNetworking (~> 3)
+    - ISO8601 (~> 0.5)
+    - JSONModel (~> 1.2)
+  - WalmartSDKKit (1.0.0):
+    - WalmartOpenApi (~> 1)
   - YelpAPI (2.0.0)
 
 DEPENDENCIES:
@@ -15,7 +39,9 @@ DEPENDENCIES:
   - AlamofireImage (from `https://github.com/Alamofire/AlamofireImage.git`)
   - AlamofireNetworkActivityIndicator (from `https://github.com/Alamofire/AlamofireNetworkActivityIndicator.git`)
   - BrightFutures
+  - Kingfisher (~> 3.0)
   - SwiftyJSON
+  - WalmartSDKKit
   - YelpAPI
 
 EXTERNAL SOURCES:
@@ -28,7 +54,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 9234355894206a43c2d3b1b0e4feb7be4385f5dd
+    :commit: 5bd458ca09a57fb2999772745d6438585f5140a7
     :git: https://github.com/Alamofire/Alamofire.git
   AlamofireImage:
     :commit: de5944b41d7c94fe6830b8113d33f51db2ae0737
@@ -38,14 +64,20 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Alamofire/AlamofireNetworkActivityIndicator.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 2983f0804e7566e66b937f5e7ef4aeba7b910426
   AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
   AlamofireNetworkActivityIndicator: 1b37f625e82da75465fc624bf26cf37cabd99a42
   BrightFutures: 8681dbb9fa831b69b6e7dc4a498b9e081d5daeb5
+  ISO8601: d3ea3ba9b752820cf92c6b47a9ee327e9f0e13fc
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  WalmartOpenApi: a68ded71e7464c1e118370826ad2d642ae790b1b
+  WalmartSDKKit: f965f6c3212988f8eab5bbf6c79c2f85ca46f580
   YelpAPI: a0475cf4a7b6f9fe81f1bb7b8a8492770f21e3c7
 
-PODFILE CHECKSUM: b5642590f6db2fb324081ccfcc3422bd2b05ec50
+PODFILE CHECKSUM: 580e8e8f6d50ef7be1d1667e9437fa716039d9d2
 
 COCOAPODS: 1.1.1

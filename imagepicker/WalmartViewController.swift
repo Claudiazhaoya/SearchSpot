@@ -12,32 +12,63 @@ import Alamofire
 import SwiftyJSON
 
 class WalmartViewController: UIViewController {
-    let apiToContact = "http://api.walmartlabs.com/v1/search?apiKey=4te2df4q9m5r37f5det99nsm&query=ipod"
-    var business: String?
     
+    
+    @IBOutlet weak var itemTableView: UITableView!
+    var items = WalmartApiHelper.items
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        Alamofire.request(apiToContact).validate().responseJSON() { response in
-            
-            switch response.result {
-            case .success:
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    print(json);
-                    // Do what you need to with JSON here!
-                    // The rest is all boiler plate code you'll use for API requests
-                    
-                }
-            case .failure(let error):
-                print(error)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details" {
+            let cell = sender as! ItemCell
+            let vc = segue.destination as! DetailViewController
+            let indexPath = itemTableView.indexPath(for: cell)
+            if let indexPath = indexPath {
+                vc.item = items[indexPath.row]
             }
         }
         
-
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
+
+extension WalmartViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        itemTableView.deselectRow(at: indexPath, animated: true)
+    }
+
+}
+
+extension WalmartViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 145
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //   print(businesses.count)
+        print(items.count)
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        let itemInfo = items[indexPath.row]
+        
+        cell.viewModel = ItemCellViewModel(withItem: itemInfo)
+        
+        return cell
+    }
+    
+    
+    
+}
+
+
+

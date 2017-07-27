@@ -84,20 +84,32 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BrightFutures/BrightFutures.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ISO8601/ISO8601.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${PODS_ROOT}/WalmartOpenApi/WalmartOpenApi.framework"
+  install_framework "${PODS_ROOT}/WalmartSDKKit/WalmartSDKKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YelpAPI/YelpAPI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BrightFutures/BrightFutures.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ISO8601/ISO8601.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JSONModel/JSONModel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${PODS_ROOT}/WalmartOpenApi/WalmartOpenApi.framework"
+  install_framework "${PODS_ROOT}/WalmartSDKKit/WalmartSDKKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/YelpAPI/YelpAPI.framework"
 fi

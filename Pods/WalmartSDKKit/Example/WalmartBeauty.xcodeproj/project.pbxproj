@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		271B01D27CC094132B132CE8 /* Pods_WalmartBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EE2D6F353BF39B27EE566A /* Pods_WalmartBeauty.framework */; };
+		77246AFF1D0981FE005E618A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246AFE1D0981FE005E618A /* AppDelegate.swift */; };
+		77246B061D0981FE005E618A /* WalmartBeauty.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77246B051D0981FE005E618A /* WalmartBeauty.xcassets */; };
+		77246B181D0A87B0005E618A /* WBCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B111D0A87B0005E618A /* WBCartManager.swift */; };
+		77246B191D0A87B0005E618A /* WBProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B121D0A87B0005E618A /* WBProductTableViewCell.swift */; };
+		77246B1A1D0A87B0005E618A /* WBCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B131D0A87B0005E618A /* WBCartTableViewCell.swift */; };
+		77246B1B1D0A87B0005E618A /* WBCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B141D0A87B0005E618A /* WBCategoryViewController.swift */; };
+		77246B1C1D0A87B0005E618A /* WBCategoryProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B151D0A87B0005E618A /* WBCategoryProductsTableViewController.swift */; };
+		77246B1D1D0A87B0005E618A /* WBCartVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77246B161D0A87B0005E618A /* WBCartVIewController.swift */; };
+		77246B221D0A8B33005E618A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77246B211D0A8B33005E618A /* Main.storyboard */; };
+		7739B6C51D212F03008AAFB2 /* WBApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7739B6C41D212F03008AAFB2 /* WBApiManager.swift */; };
+		77817B6A1D1BFBDB00C5B64F /* WBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77817B691D1BFBDB00C5B64F /* WBHelper.swift */; };
+		77869EDF1D12A7B400B12800 /* WBProductDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77869EDE1D12A7B400B12800 /* WBProductDescriptionTableViewCell.swift */; };
+		77869EFA1D13F24E00B12800 /* WBProductAddToCartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77869EF91D13F24E00B12800 /* WBProductAddToCartViewCell.swift */; };
+		77869EFE1D1412E200B12800 /* WBProductImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77869EFD1D1412E200B12800 /* WBProductImageCollectionViewCell.swift */; };
+		779089281D129BAE00EB9B38 /* WBProductTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779089271D129BAE00EB9B38 /* WBProductTitleTableViewCell.swift */; };
+		7790892A1D129F0D00EB9B38 /* WBProductImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779089291D129F0D00EB9B38 /* WBProductImageTableViewCell.swift */; };
+		7790892C1D129FC500EB9B38 /* WBProductPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7790892B1D129FC500EB9B38 /* WBProductPriceTableViewCell.swift */; };
+		7790892E1D12A59F00EB9B38 /* WBProductPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7790892D1D12A59F00EB9B38 /* WBProductPageTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39EE2D6F353BF39B27EE566A /* Pods_WalmartBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77246AFB1D0981FE005E618A /* WalmartBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77246AFE1D0981FE005E618A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77246B051D0981FE005E618A /* WalmartBeauty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WalmartBeauty.xcassets; sourceTree = "<group>"; };
+		77246B0A1D0981FE005E618A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77246B111D0A87B0005E618A /* WBCartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCartManager.swift; sourceTree = "<group>"; };
+		77246B121D0A87B0005E618A /* WBProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductTableViewCell.swift; sourceTree = "<group>"; };
+		77246B131D0A87B0005E618A /* WBCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCartTableViewCell.swift; sourceTree = "<group>"; };
+		77246B141D0A87B0005E618A /* WBCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCategoryViewController.swift; sourceTree = "<group>"; };
+		77246B151D0A87B0005E618A /* WBCategoryProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCategoryProductsTableViewController.swift; sourceTree = "<group>"; };
+		77246B161D0A87B0005E618A /* WBCartVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCartVIewController.swift; sourceTree = "<group>"; };
+		77246B211D0A8B33005E618A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7739B6C41D212F03008AAFB2 /* WBApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBApiManager.swift; sourceTree = "<group>"; };
+		77817B691D1BFBDB00C5B64F /* WBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHelper.swift; sourceTree = "<group>"; };
+		77869EDE1D12A7B400B12800 /* WBProductDescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		77869EF91D13F24E00B12800 /* WBProductAddToCartViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductAddToCartViewCell.swift; sourceTree = "<group>"; };
+		77869EFD1D1412E200B12800 /* WBProductImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		779089271D129BAE00EB9B38 /* WBProductTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductTitleTableViewCell.swift; sourceTree = "<group>"; };
+		779089291D129F0D00EB9B38 /* WBProductImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductImageTableViewCell.swift; sourceTree = "<group>"; };
+		7790892B1D129FC500EB9B38 /* WBProductPriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductPriceTableViewCell.swift; sourceTree = "<group>"; };
+		7790892D1D12A59F00EB9B38 /* WBProductPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBProductPageTableViewController.swift; sourceTree = "<group>"; };
+		BEBE78FB0863B066BACF74B7 /* Pods-WalmartBeauty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartBeauty.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartBeauty/Pods-WalmartBeauty.release.xcconfig"; sourceTree = "<group>"; };
+		E72A2D106EC2A9C84CB2B706 /* Pods-WalmartBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartBeauty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartBeauty/Pods-WalmartBeauty.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77246AF81D0981FE005E618A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				271B01D27CC094132B132CE8 /* Pods_WalmartBeauty.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B59F814A8033E0D2DF1E8A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E72A2D106EC2A9C84CB2B706 /* Pods-WalmartBeauty.debug.xcconfig */,
+				BEBE78FB0863B066BACF74B7 /* Pods-WalmartBeauty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77246AF21D0981FE005E618A = {
+			isa = PBXGroup;
+			children = (
+				77246AFD1D0981FE005E618A /* WalmartBeauty */,
+				77246AFC1D0981FE005E618A /* Products */,
+				3B59F814A8033E0D2DF1E8A5 /* Pods */,
+				E35D1E426285E7C9F990B598 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77246AFC1D0981FE005E618A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77246AFB1D0981FE005E618A /* WalmartBeauty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77246AFD1D0981FE005E618A /* WalmartBeauty */ = {
+			isa = PBXGroup;
+			children = (
+				77246AFE1D0981FE005E618A /* AppDelegate.swift */,
+				7739B6C41D212F03008AAFB2 /* WBApiManager.swift */,
+				77246B151D0A87B0005E618A /* WBCategoryProductsTableViewController.swift */,
+				77246B161D0A87B0005E618A /* WBCartVIewController.swift */,
+				77246B111D0A87B0005E618A /* WBCartManager.swift */,
+				7739B6C61D2133F0008AAFB2 /* Other Sources */,
+				77246B0A1D0981FE005E618A /* Info.plist */,
+				77246B211D0A8B33005E618A /* Main.storyboard */,
+				77246B051D0981FE005E618A /* WalmartBeauty.xcassets */,
+			);
+			path = WalmartBeauty;
+			sourceTree = "<group>";
+		};
+		77246B1F1D0A87BE005E618A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				77246B121D0A87B0005E618A /* WBProductTableViewCell.swift */,
+				779089271D129BAE00EB9B38 /* WBProductTitleTableViewCell.swift */,
+				779089291D129F0D00EB9B38 /* WBProductImageTableViewCell.swift */,
+				77869EFD1D1412E200B12800 /* WBProductImageCollectionViewCell.swift */,
+				7790892B1D129FC500EB9B38 /* WBProductPriceTableViewCell.swift */,
+				77869EF91D13F24E00B12800 /* WBProductAddToCartViewCell.swift */,
+				77869EDE1D12A7B400B12800 /* WBProductDescriptionTableViewCell.swift */,
+				77246B131D0A87B0005E618A /* WBCartTableViewCell.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		77246B201D0A87CC005E618A /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77246B141D0A87B0005E618A /* WBCategoryViewController.swift */,
+				7790892D1D12A59F00EB9B38 /* WBProductPageTableViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		7739B6C61D2133F0008AAFB2 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				77246B1F1D0A87BE005E618A /* views */,
+				77246B201D0A87CC005E618A /* controllers */,
+				77817B6B1D1BFBE700C5B64F /* helper */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		77817B6B1D1BFBE700C5B64F /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				77817B691D1BFBDB00C5B64F /* WBHelper.swift */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
+		E35D1E426285E7C9F990B598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39EE2D6F353BF39B27EE566A /* Pods_WalmartBeauty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77246AFA1D0981FE005E618A /* WalmartBeauty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77246B0D1D0981FE005E618A /* Build configuration list for PBXNativeTarget "WalmartBeauty" */;
+			buildPhases = (
+				BCAFA16519F760F134344ABD /* 📦 Check Pods Manifest.lock */,
+				77246AF71D0981FE005E618A /* Sources */,
+				77246AF81D0981FE005E618A /* Frameworks */,
+				77246AF91D0981FE005E618A /* Resources */,
+				C2D1DC28EDC7B628D6560E72 /* 📦 Embed Pods Frameworks */,
+				93EABF00DAAD8C13E518A817 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalmartBeauty;
+			productName = WalmartBeauty;
+			productReference = 77246AFB1D0981FE005E618A /* WalmartBeauty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77246AF31D0981FE005E618A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "@WalmartLabs";
+				TargetAttributes = {
+					77246AFA1D0981FE005E618A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 77246AF61D0981FE005E618A /* Build configuration list for PBXProject "WalmartBeauty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77246AF21D0981FE005E618A;
+			productRefGroup = 77246AFC1D0981FE005E618A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77246AFA1D0981FE005E618A /* WalmartBeauty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77246AF91D0981FE005E618A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77246B221D0A8B33005E618A /* Main.storyboard in Resources */,
+				77246B061D0981FE005E618A /* WalmartBeauty.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93EABF00DAAD8C13E518A817 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalmartBeauty/Pods-WalmartBeauty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAFA16519F760F134344ABD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D1DC28EDC7B628D6560E72 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalmartBeauty/Pods-WalmartBeauty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77246AF71D0981FE005E618A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77246B191D0A87B0005E618A /* WBProductTableViewCell.swift in Sources */,
+				77817B6A1D1BFBDB00C5B64F /* WBHelper.swift in Sources */,
+				779089281D129BAE00EB9B38 /* WBProductTitleTableViewCell.swift in Sources */,
+				77246B1C1D0A87B0005E618A /* WBCategoryProductsTableViewController.swift in Sources */,
+				77246AFF1D0981FE005E618A /* AppDelegate.swift in Sources */,
+				7739B6C51D212F03008AAFB2 /* WBApiManager.swift in Sources */,
+				77869EFA1D13F24E00B12800 /* WBProductAddToCartViewCell.swift in Sources */,
+				77246B1B1D0A87B0005E618A /* WBCategoryViewController.swift in Sources */,
+				77246B1D1D0A87B0005E618A /* WBCartVIewController.swift in Sources */,
+				7790892A1D129F0D00EB9B38 /* WBProductImageTableViewCell.swift in Sources */,
+				77869EDF1D12A7B400B12800 /* WBProductDescriptionTableViewCell.swift in Sources */,
+				77246B181D0A87B0005E618A /* WBCartManager.swift in Sources */,
+				7790892E1D12A59F00EB9B38 /* WBProductPageTableViewController.swift in Sources */,
+				7790892C1D129FC500EB9B38 /* WBProductPriceTableViewCell.swift in Sources */,
+				77246B1A1D0A87B0005E618A /* WBCartTableViewCell.swift in Sources */,
+				77869EFE1D1412E200B12800 /* WBProductImageCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		77246B0B1D0981FE005E618A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77246B0C1D0981FE005E618A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77246B0E1D0981FE005E618A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E72A2D106EC2A9C84CB2B706 /* Pods-WalmartBeauty.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WalmartBeauty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.tofa.WalmartBeauty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77246B0F1D0981FE005E618A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBE78FB0863B066BACF74B7 /* Pods-WalmartBeauty.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WalmartBeauty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walmartlabs.tofa.WalmartBeauty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77246AF61D0981FE005E618A /* Build configuration list for PBXProject "WalmartBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77246B0B1D0981FE005E618A /* Debug */,
+				77246B0C1D0981FE005E618A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77246B0D1D0981FE005E618A /* Build configuration list for PBXNativeTarget "WalmartBeauty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77246B0E1D0981FE005E618A /* Debug */,
+				77246B0F1D0981FE005E618A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77246AF31D0981FE005E618A /* Project object */;
+}

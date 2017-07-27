@@ -37,8 +37,10 @@ class StoreOptionViewController: UIViewController {
     
     @IBAction func WalmartButtonTapped(_ sender: UIButton) {
         self.activityIndicator.startAnimating()
-        self.performSegue(withIdentifier: "Walmart", sender: self)
-        
+        WalmartApiHelper.getWalmartBusiness(completion: {_ in
+            self.activityIndicator.stopAnimating()
+            self.performSegue(withIdentifier: "Walmart", sender: self)
+        })
     }
     
     //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

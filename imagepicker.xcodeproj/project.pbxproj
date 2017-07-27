@@ -21,10 +21,16 @@
 		B23963901F1ED5EE00384315 /* ImagePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239638F1F1ED5EE00384315 /* ImagePickerHelper.swift */; };
 		B23963921F1FFE4500384315 /* YelpApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23963911F1FFE4500384315 /* YelpApiHelper.swift */; };
 		B23963941F1FFE5600384315 /* WalmartApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23963931F1FFE5600384315 /* WalmartApiHelper.swift */; };
+		B23C8C691F27BF89004423F3 /* IntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C681F27BF89004423F3 /* IntroCell.swift */; };
+		B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */; };
+		B23C8C6D1F27BFBB004423F3 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */; };
 		B2B60CB31F16D8640007B120 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB21F16D8640007B120 /* BusinessViewController.swift */; };
 		B2B60CB61F16EADC0007B120 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB51F16EADC0007B120 /* BusinessCell.swift */; };
 		B2B60CBA1F1836C10007B120 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B60CB91F1836C10007B120 /* MapKit.framework */; };
 		B2B60CBC1F1836D10007B120 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B60CBB1F1836D10007B120 /* CoreData.framework */; };
+		B2E06DA01F2286ED00AFE7D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06D9F1F2286ED00AFE7D3 /* Item.swift */; };
+		B2E06DA21F22A9D500AFE7D3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06DA11F22A9D500AFE7D3 /* ItemCell.swift */; };
+		B2E06DA41F269C4300AFE7D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */; };
 		B2F495CD1F16958E00361CE4 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F495CC1F16958E00361CE4 /* OptionsViewController.swift */; };
 		DC6D6714E04797FA123D80F1 /* Pods_imagepicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249890A99ED0C03E4BF78770 /* Pods_imagepicker.framework */; };
 /* End PBXBuildFile section */
@@ -69,10 +75,16 @@
 		B239638F1F1ED5EE00384315 /* ImagePickerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerHelper.swift; sourceTree = "<group>"; };
 		B23963911F1FFE4500384315 /* YelpApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpApiHelper.swift; sourceTree = "<group>"; };
 		B23963931F1FFE5600384315 /* WalmartApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalmartApiHelper.swift; sourceTree = "<group>"; };
+		B23C8C681F27BF89004423F3 /* IntroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCell.swift; sourceTree = "<group>"; };
+		B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeShipCell.swift; sourceTree = "<group>"; };
+		B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		B2B60CB21F16D8640007B120 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		B2B60CB51F16EADC0007B120 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		B2B60CB91F1836C10007B120 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B2B60CBB1F1836D10007B120 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B2E06D9F1F2286ED00AFE7D3 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B2E06DA11F22A9D500AFE7D3 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B2F495CC1F16958E00361CE4 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		D1D2D37BECBAFEFA38A63C60 /* Pods-imagepicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagepicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagepicker/Pods-imagepicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				B2B60CB51F16EADC0007B120 /* BusinessCell.swift */,
+				B2E06DA11F22A9D500AFE7D3 /* ItemCell.swift */,
+				B23C8C681F27BF89004423F3 /* IntroCell.swift */,
+				B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */,
+				B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +210,7 @@
 		B2E06D9E1F2280C300AFE7D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2E06D9F1F2286ED00AFE7D3 /* Item.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,6 +224,7 @@
 				B21E65FB1F192C2E002B7CFE /* MapViewController.swift */,
 				B23963841F1E89FC00384315 /* WalmartViewController.swift */,
 				B239638B1F1EBB9A00384315 /* StoreOptionViewController.swift */,
+				B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -406,10 +424,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23C8C691F27BF89004423F3 /* IntroCell.swift in Sources */,
+				B2E06DA21F22A9D500AFE7D3 /* ItemCell.swift in Sources */,
+				B23C8C6D1F27BFBB004423F3 /* DescriptionCell.swift in Sources */,
 				B2B60CB61F16EADC0007B120 /* BusinessCell.swift in Sources */,
+				B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */,
 				B2F495CD1F16958E00361CE4 /* OptionsViewController.swift in Sources */,
 				B23963941F1FFE5600384315 /* WalmartApiHelper.swift in Sources */,
 				B23963901F1ED5EE00384315 /* ImagePickerHelper.swift in Sources */,
+				B2E06DA01F2286ED00AFE7D3 /* Item.swift in Sources */,
 				B239638C1F1EBB9A00384315 /* StoreOptionViewController.swift in Sources */,
 				B2B60CB31F16D8640007B120 /* BusinessViewController.swift in Sources */,
 				1BFC2E7E1BF1AA7300885EBB /* AppDelegate.swift in Sources */,
@@ -417,6 +440,7 @@
 				B21E65FA1F192BA5002B7CFE /* PageViewController.swift in Sources */,
 				B23963921F1FFE4500384315 /* YelpApiHelper.swift in Sources */,
 				B21E65FC1F192C2E002B7CFE /* MapViewController.swift in Sources */,
+				B2E06DA41F269C4300AFE7D3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

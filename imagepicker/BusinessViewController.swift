@@ -41,24 +41,25 @@ class BusinessViewController: UIViewController, CLLocationManagerDelegate, MKMap
 }
 
 extension BusinessViewController: UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //   print(businesses.count)
-        return businesses.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath)
-        let businessInfo = businesses[indexPath.row]
-        
-        (cell as? BusinessCell)?.viewModel = BusinessCellViewModel(withBusiness: businessInfo)
-        
-        return cell
-    }
+//    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        //   print(businesses.count)
+//        print(businesses.count)
+//        return businesses.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath)
+//        let businessInfo = businesses[indexPath.row]
+//        
+//        (cell as? BusinessCell)?.viewModel = BusinessCellViewModel(withBusiness: businessInfo)
+//        
+//        return cell
+//    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         businessTableView.deselectRow(at: indexPath, animated: true)
     }
@@ -70,6 +71,21 @@ extension BusinessViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //   print(businesses.count)
+        print(businesses.count)
+        return businesses.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath)
+        let businessInfo = businesses[indexPath.row]
+        
+        (cell as? BusinessCell)?.viewModel = BusinessCellViewModel(withBusiness: businessInfo)
+        
+        return cell
+    }
+
     
     
 }

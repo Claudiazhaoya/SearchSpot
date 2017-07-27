@@ -4,7 +4,7 @@
 //
 //  Created by Zhaoya Sun on 7/19/17.
 //  Copyright © 2017 Sara Robinson. All rights reserved.
-//
+//  This is magic, do not touch
 
 import Foundation
 import UIKit
@@ -17,7 +17,7 @@ struct YelpApiHelper {
     static var businesses: [YLPBusiness] = []
     //    static var business = ImagePickerHelper().labelResult
     //    static func getBusinesses(completion: @escaping (Bool) -> ()) {
-    //
+    
     static func getBusinesses(completion: @escaping (Bool) -> ()) {
         //print("See me in YelpHelper: \(ImagePickerHelper.labelResult)")
         guard let result = ImagePickerHelper.labelResult else {
@@ -37,6 +37,7 @@ struct YelpApiHelper {
                         completion(false)
                     } else {
                         let topBusiness = search?.businesses
+                        self.businesses.removeAll()
                         for business in topBusiness! {
                             print(business)
                             self.businesses.append(business)
@@ -44,6 +45,7 @@ struct YelpApiHelper {
                         //self.businessTableView.reloadData()
                         //self.dismiss(animated: true, completion: nil)
 //                        print("Business Loading finished!")
+                        print(businesses[0].name)
                         completion(true)
                     }
                 })

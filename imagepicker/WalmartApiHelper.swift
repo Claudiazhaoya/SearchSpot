@@ -11,28 +11,40 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class WalmartApiHelper {
-    let apiToContact = "http://api.walmartlabs.com/v1/search?apiKey=4te2df4q9m5r37f5det99nsm&query=ipod"
-    static var businesses: [String] = []
-    func getWalmartBusiness() {
-        guard let business = ImagePickerHelper.labelResult else {
+struct WalmartApiHelper {
+    static let apiKey1 = "http://api.walmartlabs.com/v1/search?apiKey=4te2df4q9m5r37f5det99nsm&query="
+    static var items: [Item] = []
+//    static let query = ImagePickerHelper.labelResult!
+    
+    
+    static func getWalmartBusiness(completion: @escaping (Bool) -> ()) {
+        guard let query = ImagePickerHelper.labelResult else {
             return
         }
-        Alamofire.request(apiToContact).validate().responseJSON() { response in
+        print("labelResult: \(query)")
+        let apiKey = self.apiKey1 + query
+        Alamofire.request(apiKey).validate().responseJSON() { response in
             
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                    let json = JSON(value)
-                    print(json);
+                    let itemData = JSON(value)
+                    print(itemData)
+                    self.items.removeAll()
                     // Do what you need to with JSON here!
                     // The rest is all boiler plate code you'll use for API requests
+                    let allItemsData = itemData["items"].arrayValue
+                    
+                    for item in allItemsData {
+                        self.items.append(Item(json: item))
+                    }
+                    
+                    completion(true)
                 }
             case .failure(let error):
                 print(error)
+                completion(false)
             }
         }
-        
-        
     }
 }
