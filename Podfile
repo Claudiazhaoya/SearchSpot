@@ -24,5 +24,6 @@ target 'imagepicker' do
     pod 'AlamofireNetworkActivityIndicator', :git => 'https://github.com/Alamofire/AlamofireNetworkActivityIndicator.git'
     pod 'WalmartSDKKit'
     pod 'Kingfisher', '~> 3.0'
+
     
 end

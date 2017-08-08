@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/19/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -12,24 +12,22 @@ import SwiftyJSON
 import Alamofire
 
 struct WalmartApiHelper {
-    static let apiKey1 = "http://api.walmartlabs.com/v1/search?apiKey=4te2df4q9m5r37f5det99nsm&query="
+    static let apiKey1 = "http://api.walmartlabs.com/v1/search?apiKey=m87a485tb3ccap99km9sr8he&query="
     static var items: [Item] = []
 //    static let query = ImagePickerHelper.labelResult!
+    var searchKey: String = ""
     
-    
-    static func getWalmartBusiness(completion: @escaping (Bool) -> ()) {
-        guard let query = ImagePickerHelper.labelResult else {
-            return
-        }
+    static func getWalmartBusiness(searchKey: String, completion: @escaping (Bool) -> ()) {
+        let query = searchKey
         print("labelResult: \(query)")
         let apiKey = self.apiKey1 + query
+//        print(apiKey)
         Alamofire.request(apiKey).validate().responseJSON() { response in
             
             switch response.result {
             case .success:
                 if let value = response.result.value {
                     let itemData = JSON(value)
-                    print(itemData)
                     self.items.removeAll()
                     // Do what you need to with JSON here!
                     // The rest is all boiler plate code you'll use for API requests

@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/25/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -69,7 +69,7 @@ final class IntroCell: UITableViewCell {
             self.nameLabel.numberOfLines = 2
             self.salePriceLabel.text = String(vm.salePrice)
             self.addToCartButton.setTitle("Add to cart", for: .normal)
-            self.loadImage(urlString: vm.imageUrl.replacingOccurrences(of: "450", with:"1080"), usePostView: true)
+            self.loadImage(urlString: vm.imageUrl, usePostView: true)
             self.loadImage(urlString: vm.ratingImageView, usePostView: true)
             self.numReviewsLabel.text = "\(vm.numReviews)"
         }
@@ -83,7 +83,6 @@ final class IntroCell: UITableViewCell {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var salePriceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
-    @IBOutlet weak var buyLabel: UILabel!
     @IBOutlet weak var ratingImageView: UIImageView!
     @IBOutlet weak var numReviewsLabel: UILabel!
     
@@ -103,20 +102,9 @@ final class IntroCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let Item = WMTItem(itemId: "39665237", itemIdType: WMTItemIdType.walmartId)
-        //        let iPadProItem = WMTItem(itemId: "888462517904", itemIdType: WMTItemIdType.UPC)
-        
-        let LineItem = WMTLineItem(wmtItem: Item, quantity: 1)
-        //        let iPadProLineItem = WMTLineItem(wmtItem: iPadProItem, quantity: 1)
-        
-        let wmtLineItemsSet: Set<WMTLineItem> = [LineItem!]
-        buyNowButton = WMTBuyNowControl(wmtLineItems: wmtLineItemsSet)
-        
-        buyNowButton?.center = self.buyLabel.center;
-        // Change Size to Compact Scheme
-        buyNowButton?.sizeScheme = WMTButtonSizeScheme.compact;
-        
-        self.contentsView.addSubview(buyNowButton!);
+        addToCartButton.layer.masksToBounds = false
+        addToCartButton.layer.cornerRadius = 10.0
+        addToCartButton.clipsToBounds = true        
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

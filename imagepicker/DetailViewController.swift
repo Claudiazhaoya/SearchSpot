@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/24/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -17,18 +17,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var uitableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let iPhone6Item = WMTItem(itemId: "39665237", itemIdType: WMTItemIdType.walmartId)
-//        let iPadProItem = WMTItem(itemId: "888462517904", itemIdType: WMTItemIdType.UPC)
-//        
-//        let iPhone6LineItem = WMTLineItem(wmtItem: iPhone6Item, quantity: 1)
-//        let iPadProLineItem = WMTLineItem(wmtItem: iPadProItem, quantity: 1)
-//        
-//        let wmtLineItemsSet: Set<WMTLineItem> = [iPhone6LineItem!, iPadProLineItem!]
-//        let buyNowButton = WMTBuyNowControl(wmtLineItems: wmtLineItemsSet)
-//        
-//        buyNowButton?.center = self.uitableView.center;
-//        buyNowButton?.frame = CGRectMake(UIScreen.main.bounds.width - 110, 0, 90, 30)
-//        self.uitableView.addSubview(buyNowButton!);
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,17 +31,6 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: UITableViewDataSource {
- 
-    func setItemForWMButton(_ item:Item) -> Set<WMTLineItem> {
-        let Item = WMTItem(itemId: "39665237", itemIdType: WMTItemIdType.walmartId)
-        //        let iPadProItem = WMTItem(itemId: "888462517904", itemIdType: WMTItemIdType.UPC)
-        
-        let LineItem = WMTLineItem(wmtItem: Item, quantity: 1)
-        //        let iPadProLineItem = WMTLineItem(wmtItem: iPadProItem, quantity: 1)
-        
-        let wmtLineItemsSet: Set<WMTLineItem> = [LineItem!]
-        return wmtLineItemsSet
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -66,11 +43,10 @@ extension DetailViewController: UITableViewDataSource {
             let cell: IntroCell = tableView.dequeueReusableCell(withIdentifier: "IntroCell", for: indexPath) as! IntroCell
             cell.item = item
             cell.nameLabel.text = item?.name
-            let imageURL = URL(string: (item?.imageUrl.replacingOccurrences(of: "450", with:"1080"))!)
+            let imageURL = URL(string: (item?.imageUrl.replacingOccurrences(of: "180", with:"1080"))!)
             cell.posterView.kf.setImage(with: imageURL)
             cell.salePriceLabel.text = "$\(String(describing: (item?.salePrice)!))"
             cell.addToCartButton.setTitle("Add to cart", for: .normal)
-            cell.buyNowButton?.setWMTLineItems(setItemForWMButton(item!))
             cell.numReviewsLabel.text = "\(String(describing: (item?.numReviews)!))"
             let ratingUrl = URL(string: (item?.customerRatingImageUrl)!)
             cell.ratingImageView.kf.setImage(with: ratingUrl)
@@ -94,6 +70,13 @@ extension DetailViewController: UITableViewDataSource {
             }
             return cell
             
+        case 3:
+            let cell: ReviewCell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
+            WalmartReviewApiHelper.itemId = item?.itemId
+            
+            return cell
+            
+            
         default:
             //            fatalError("Error: unexpected indexPath.")
             print(indexPath)
@@ -113,7 +96,9 @@ extension DetailViewController: UITableViewDelegate {
             return FreeShipCell.height
         case 2:
             return DescriptionCell.height
-            
+        case 3:
+            return ReviewCell.height
+
         default:
             fatalError()
             

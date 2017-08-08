@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WMTSDK.sharedInstance().initSDK()
         
         WMTLogger.default().logLevel = WMTLogLevel.error
+        UINavigationBar.appearance().tintColor = UIColor.gray
         // Override point for customization after application launch.
         return true
     }

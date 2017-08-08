@@ -3,14 +3,14 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/25/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
 class DescriptionCell: UITableViewCell {
-    static let height: CGFloat = 220
+    static let height: CGFloat = 180
     
     
     @IBOutlet weak var shortDescriptionTextField: UITextView!

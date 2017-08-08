@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/13/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -29,16 +29,20 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let info = info else{
+        guard let info = info else {
             print("error")
             return
         }
         nameLabel.text = info.name
-        addressLabel.text = "Address: \(info.location.address.first!)"
-        if info.phone != nil {
-            phoneNumberLabel.setTitle("Call: \(info.phone!)", for: .normal)
+        if info.location.address.first != nil {
+            addressLabel.text = "Address: \(info.location.address.first!)"
         } else {
-            phoneNumberLabel.setTitle("No Contact info ", for: .normal)
+            addressLabel.text = "Address is not available"
+        }
+        if info.phone != nil {
+            phoneNumberLabel.setTitle("Contact: \(info.phone!)", for: .normal)
+        } else {
+            phoneNumberLabel.setTitle("No Contact info", for: .normal)
         }
         reviewCountLabel.text = "Rating: \(String(info.rating))"
         let data = try! Data(contentsOf: info.imageURL!)
@@ -54,7 +58,6 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         self.mapView.delegate = self
         if info.location.coordinate != nil {
-            //
             let coordinate = CLLocationCoordinate2DMake( (info.location.coordinate?.latitude)!, (info.location.coordinate?.longitude)!)
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
@@ -65,9 +68,7 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     
     @IBAction func websiteButtonTapped(_ sender: Any) {
-        
-            UIApplication.shared.openURL((info?.url)!)
-      
+        UIApplication.shared.openURL((info?.url)!)
     }
     
     @IBAction func phoneNumberTapped(_ sender: UIButton) {
@@ -101,18 +102,18 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let annotation:MKPointAnnotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = info?.name
-        annotation.subtitle = info?.location.address[0]
-
+        if (info?.location.address)! != [] {
+            annotation.subtitle = info?.location.address[0]
+        } else {
+            annotation.subtitle = info?.name
+        }
         addUserLocation(annotation: annotation)
-        
     }
     
     
     // MARK:-MapView Region & Annotations Helper Methods
     
     private func setUpRepresentRegionOnMap(withLatitude latitude: CLLocationDegrees, longitude: CLLocationDegrees, lattitudeDelta: CLLocationDegrees = 0.01, longitudeDelta: CLLocationDegrees = 0.01) {
-        //        let latDelta: CLLocationDegrees = 0.01
-        //        let longDelta: CLLocationDegrees = 0.01
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let span = MKCoordinateSpan(latitudeDelta: lattitudeDelta, longitudeDelta: longitudeDelta)
         let region = MKCoordinateRegion(center: coordinate, span: span)
@@ -120,7 +121,7 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         prepareForSegue(of: coordinate)
     }
     
-
+    
     
     private func addUserLocation(annotation: MKPointAnnotation) {
         for annotation in mapView.annotations {
@@ -130,18 +131,16 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let currentLocation = locations.first
         let latitude = info?.location.coordinate?.latitude
+        print(latitude!)
         let longitude = info?.location.coordinate?.longitude
+        print(longitude!)
         self.setUpRepresentRegionOnMap(withLatitude: latitude!, longitude: longitude!)
-//        displayLocation(coordinate: currentLocation!)
+
         locationManager.stopUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
+               print(error.localizedDescription)
     }
-
-    
-
 }
 

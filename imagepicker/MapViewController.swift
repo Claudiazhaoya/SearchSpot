@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/13/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -96,7 +96,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         private func prepareForSegue(of coordinate: CLLocationCoordinate2D) {
             let annotation:MKPointAnnotation = MKPointAnnotation()
             annotation.coordinate = coordinate
-     
             addUserLocation(annotation: annotation)
             
         }
@@ -107,4 +106,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
             mapView.addAnnotation(annotation)
         }
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        let annotationIdentifier = "Identifier"
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            
+            annotationView.canShowCallout = true
+            let pinImage = UIImage(named: "yelpPin.png")!
+            print("image:\(pinImage)")
+            let size = CGSize(width: 40, height: 40)
+            UIGraphicsBeginImageContext(size)
+            pinImage.draw(in: CGRect(x:0, y:0, width:37, height:37))
+            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            annotationView.image = resizedImage
+        }
+        return annotationView
+    }
+
 }

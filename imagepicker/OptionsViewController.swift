@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/12/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //
 
 import Foundation
@@ -15,50 +15,69 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var loadImageButton: UIButton!
+    @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
+    
     var selectedImage:UIImage?
-
     //select the image source from camera
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .camera
-        
+        UIView.transition(with: cameraButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.sourceType = .camera
+        })
         present(imagePicker, animated: true, completion: nil)
+        
     }
-
+    
     //select the image source from album
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        
+        UIView.transition(with: loadImageButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
+            sender.isUserInteractionEnabled = false
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.sourceType = .photoLibrary
+            sender.isUserInteractionEnabled = true
+        })
         present(imagePicker, animated:  true, completion:  nil)
     }
     
+    @IBAction func speechToTextButtonTapped(_ sender: UIButton) {
+        UIView.transition(with: voiceButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
+            self.performSegue(withIdentifier: "speechToText", sender: self)
+        })
+    }
+    
     @IBAction func searchButtonTapped(_ sender: UIButton) {
-        print("Not working now!")
+        UIView.transition(with: searchButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
+            self.performSegue(withIdentifier: "search", sender: self)
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-               
+        
         if segue.identifier == "option" {
             let destination = segue.destination as? StoreOptionViewController
             destination?.image = selectedImage
- //            print("Hello, option!")
- //       } else if segue.identifier == "search" {
- //           let destination = segue.destination as? BusinessViewController
-//            print("Hello, search!")
+//        } else if segue.identifier == "search" {
+//        } else if segue.identifier == "speechToText" {
         }
-        
     }
     
     
-    
+    func changeShape(button: UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 10.0
+        button.clipsToBounds = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "purdue.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pinMap.png")!)
         self.view.contentMode = UIViewContentMode.scaleAspectFill
         imagePicker.delegate = self
+        changeShape(button: cameraButton)
+        changeShape(button: loadImageButton)
+        changeShape(button: voiceButton)
+        changeShape(button: searchButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,23 +86,25 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     //get the image from either source type
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//            imageView.contentMode = .scaleAspectFit
-//            imageView.image = pickedImage
+            //            imageView.contentMode = .scaleAspectFit
+            //            imageView.image = pickedImage
             self.selectedImage = pickedImage
-            
+            if picker.sourceType == .camera {
+                UIImageWriteToSavedPhotosAlbum(self.selectedImage!, nil, nil, nil);
+            }
             let binaryImageData = ImagePickerHelper.base64EncodeImage(selectedImage!)
             ImagePickerHelper.createRequest(with: binaryImageData, completion: { (detectedItem) in
                 
-            
-//            let label = ImagePickerHelper.labelResult
-            self.performSegue(withIdentifier: "option", sender: self)
-        })
+                
+                //            let label = ImagePickerHelper.labelResult
+                self.performSegue(withIdentifier: "option", sender: self)
+            })
         }
         
         dismiss(animated: true, completion: nil)
     }
     //deal with the cancel situation
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
 }

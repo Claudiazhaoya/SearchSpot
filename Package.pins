@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "WatsonDeveloperCloud",
+      "reason": null,
+      "repositoryURL": "https://github.com/watson-developer-cloud/swift-sdk.git",
+      "version": "0.16.0"
+    }
+  ],
+  "version": 1
+}

@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Do you allow Spotsearch to access to your microphone?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Do you allow Spotsearch to access to your current location?</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -10,7 +14,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Spot</string>
+	<string>Spotsearch</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,11 +34,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>For getting the images to analyze</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Give me your location</string>
+	<string>Do you allow Spotsearch to access to your camera?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Do you allow Spotsearch to access to your current location?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>For getting the images to analyze</string>
+	<string>Do you allow Spotsearch to access to your albums?</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -56,7 +60,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>WalmartPublisherId</key>
-    <string>4te2df4q9m5r37f5det99nsm</string>
+	<key>WalmartPublisherId</key>
+	<string>4te2df4q9m5r37f5det99nsm</string>
 </dict>
 </plist>

@@ -24,13 +24,25 @@
 		B23C8C691F27BF89004423F3 /* IntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C681F27BF89004423F3 /* IntroCell.swift */; };
 		B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */; };
 		B23C8C6D1F27BFBB004423F3 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */; };
+		B24742831F33E35E00913A0C /* MicrophoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24742821F33E35E00913A0C /* MicrophoneViewController.swift */; };
+		B24742851F33E3B000913A0C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24742841F33E3B000913A0C /* Credentials.swift */; };
 		B2B60CB31F16D8640007B120 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB21F16D8640007B120 /* BusinessViewController.swift */; };
 		B2B60CB61F16EADC0007B120 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB51F16EADC0007B120 /* BusinessCell.swift */; };
 		B2B60CBA1F1836C10007B120 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B60CB91F1836C10007B120 /* MapKit.framework */; };
 		B2B60CBC1F1836D10007B120 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B60CBB1F1836D10007B120 /* CoreData.framework */; };
+		B2B7D5101F34DDDE00FDAF65 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7D50F1F34DDDE00FDAF65 /* SpeechToTextV1.framework */; };
+		B2B7D5121F34DE2000FDAF65 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7D5111F34DE2000FDAF65 /* RestKit.framework */; };
+		B2B7D5161F34E8CC00FDAF65 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7D5151F34E8CC00FDAF65 /* PopUpViewController.swift */; };
 		B2E06DA01F2286ED00AFE7D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06D9F1F2286ED00AFE7D3 /* Item.swift */; };
 		B2E06DA21F22A9D500AFE7D3 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06DA11F22A9D500AFE7D3 /* ItemCell.swift */; };
 		B2E06DA41F269C4300AFE7D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */; };
+		B2E8D5A61F2BA670009C3811 /* WalmartReviewApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5A51F2BA670009C3811 /* WalmartReviewApiHelper.swift */; };
+		B2E8D5A81F2BA6E0009C3811 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5A71F2BA6E0009C3811 /* Review.swift */; };
+		B2E8D5AA1F2BAC60009C3811 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5A91F2BAC60009C3811 /* ReviewCell.swift */; };
+		B2E8D5AC1F2FD282009C3811 /* WalmartMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5AB1F2FD282009C3811 /* WalmartMapViewController.swift */; };
+		B2E8D5AE1F2FE966009C3811 /* WalmartMapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5AD1F2FE966009C3811 /* WalmartMapHelper.swift */; };
+		B2E8D5B01F2FF770009C3811 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5AF1F2FF770009C3811 /* Location.swift */; };
+		B2E8D5EE1F325825009C3811 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8D5ED1F325825009C3811 /* searchViewController.swift */; };
 		B2F495CD1F16958E00361CE4 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F495CC1F16958E00361CE4 /* OptionsViewController.swift */; };
 		DC6D6714E04797FA123D80F1 /* Pods_imagepicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249890A99ED0C03E4BF78770 /* Pods_imagepicker.framework */; };
 /* End PBXBuildFile section */
@@ -78,13 +90,28 @@
 		B23C8C681F27BF89004423F3 /* IntroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCell.swift; sourceTree = "<group>"; };
 		B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeShipCell.swift; sourceTree = "<group>"; };
 		B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		B24742821F33E35E00913A0C /* MicrophoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneViewController.swift; sourceTree = "<group>"; };
+		B24742841F33E3B000913A0C /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		B247428A1F33F27700913A0C /* SpeechToTextV1.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SpeechToTextV1.framework.dSYM; path = Carthage/Build/iOS/SpeechToTextV1.framework.dSYM; sourceTree = "<group>"; };
+		B247428C1F34D97900913A0C /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		B2B60CB21F16D8640007B120 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		B2B60CB51F16EADC0007B120 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		B2B60CB91F1836C10007B120 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B2B60CBB1F1836D10007B120 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B2B7D50D1F34DDC600FDAF65 /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
+		B2B7D50F1F34DDDE00FDAF65 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
+		B2B7D5111F34DE2000FDAF65 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
+		B2B7D5151F34E8CC00FDAF65 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B2E06D9F1F2286ED00AFE7D3 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B2E06DA11F22A9D500AFE7D3 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B2E8D5A51F2BA670009C3811 /* WalmartReviewApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalmartReviewApiHelper.swift; sourceTree = "<group>"; };
+		B2E8D5A71F2BA6E0009C3811 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		B2E8D5A91F2BAC60009C3811 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		B2E8D5AB1F2FD282009C3811 /* WalmartMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalmartMapViewController.swift; sourceTree = "<group>"; };
+		B2E8D5AD1F2FE966009C3811 /* WalmartMapHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalmartMapHelper.swift; sourceTree = "<group>"; };
+		B2E8D5AF1F2FF770009C3811 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B2E8D5ED1F325825009C3811 /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		B2F495CC1F16958E00361CE4 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		D1D2D37BECBAFEFA38A63C60 /* Pods-imagepicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagepicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagepicker/Pods-imagepicker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B7D5121F34DE2000FDAF65 /* RestKit.framework in Frameworks */,
+				B2B7D5101F34DDDE00FDAF65 /* SpeechToTextV1.framework in Frameworks */,
 				B2B60CBC1F1836D10007B120 /* CoreData.framework in Frameworks */,
 				B2B60CBA1F1836C10007B120 /* MapKit.framework in Frameworks */,
 				1BB2EE991C359A9C0066BECE /* SwiftyJSON.framework in Frameworks */,
@@ -121,6 +150,11 @@
 		1A7875495C2015C0FC41D8D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2B7D5111F34DE2000FDAF65 /* RestKit.framework */,
+				B2B7D50F1F34DDDE00FDAF65 /* SpeechToTextV1.framework */,
+				B2B7D50D1F34DDC600FDAF65 /* TextToSpeechV1.framework */,
+				B247428C1F34D97900913A0C /* Speech.framework */,
+				B247428A1F33F27700913A0C /* SpeechToTextV1.framework.dSYM */,
 				B2B60CBB1F1836D10007B120 /* CoreData.framework */,
 				B2B60CB91F1836C10007B120 /* MapKit.framework */,
 				1BB2EE981C359A9C0066BECE /* SwiftyJSON.framework */,
@@ -154,6 +188,7 @@
 		1BFC2E7C1BF1AA7300885EBB /* imagepicker */ = {
 			isa = PBXGroup;
 			children = (
+				B24742861F33E3C000913A0C /* supports */,
 				B2E06D9E1F2280C300AFE7D3 /* Models */,
 				B239638A1F1EAB2500384315 /* Helpers */,
 				B2B60CB41F16EACC0007B120 /* View */,
@@ -162,7 +197,6 @@
 				1BFC2E811BF1AA7300885EBB /* Main.storyboard */,
 				1BFC2E841BF1AA7300885EBB /* Assets.xcassets */,
 				1BFC2E861BF1AA7300885EBB /* LaunchScreen.storyboard */,
-				1BFC2E891BF1AA7300885EBB /* Info.plist */,
 			);
 			path = imagepicker;
 			sourceTree = "<group>";
@@ -191,8 +225,19 @@
 				B239638F1F1ED5EE00384315 /* ImagePickerHelper.swift */,
 				B23963911F1FFE4500384315 /* YelpApiHelper.swift */,
 				B23963931F1FFE5600384315 /* WalmartApiHelper.swift */,
+				B2E8D5A51F2BA670009C3811 /* WalmartReviewApiHelper.swift */,
+				B2E8D5AD1F2FE966009C3811 /* WalmartMapHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B24742861F33E3C000913A0C /* supports */ = {
+			isa = PBXGroup;
+			children = (
+				B24742841F33E3B000913A0C /* Credentials.swift */,
+				1BFC2E891BF1AA7300885EBB /* Info.plist */,
+			);
+			name = supports;
 			sourceTree = "<group>";
 		};
 		B2B60CB41F16EACC0007B120 /* View */ = {
@@ -203,6 +248,7 @@
 				B23C8C681F27BF89004423F3 /* IntroCell.swift */,
 				B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */,
 				B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */,
+				B2E8D5A91F2BAC60009C3811 /* ReviewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -211,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				B2E06D9F1F2286ED00AFE7D3 /* Item.swift */,
+				B2E8D5A71F2BA6E0009C3811 /* Review.swift */,
+				B2E8D5AF1F2FF770009C3811 /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -225,6 +273,10 @@
 				B23963841F1E89FC00384315 /* WalmartViewController.swift */,
 				B239638B1F1EBB9A00384315 /* StoreOptionViewController.swift */,
 				B2E06DA31F269C4300AFE7D3 /* DetailViewController.swift */,
+				B24742821F33E35E00913A0C /* MicrophoneViewController.swift */,
+				B2E8D5AB1F2FD282009C3811 /* WalmartMapViewController.swift */,
+				B2E8D5ED1F325825009C3811 /* searchViewController.swift */,
+				B2B7D5151F34E8CC00FDAF65 /* PopUpViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -305,7 +357,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Sara Robinson";
+				ORGANIZATIONNAME = "Claudia Sun";
 				TargetAttributes = {
 					1BFC2E791BF1AA7300885EBB = {
 						CreatedOnToolsVersion = 7.1;
@@ -378,14 +430,15 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SpeechToTextV1.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RestKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagepicker/Pods-imagepicker-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\"${SRCROOT}/Pods/Target Support Files/Pods-imagepicker/Pods-imagepicker-frameworks.sh\"\n";
 		};
 		975209D4FA62D26BE2E4CA99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -425,8 +478,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23C8C691F27BF89004423F3 /* IntroCell.swift in Sources */,
+				B2E8D5AE1F2FE966009C3811 /* WalmartMapHelper.swift in Sources */,
+				B24742831F33E35E00913A0C /* MicrophoneViewController.swift in Sources */,
+				B2E8D5AA1F2BAC60009C3811 /* ReviewCell.swift in Sources */,
+				B24742851F33E3B000913A0C /* Credentials.swift in Sources */,
 				B2E06DA21F22A9D500AFE7D3 /* ItemCell.swift in Sources */,
 				B23C8C6D1F27BFBB004423F3 /* DescriptionCell.swift in Sources */,
+				B2E8D5A61F2BA670009C3811 /* WalmartReviewApiHelper.swift in Sources */,
 				B2B60CB61F16EADC0007B120 /* BusinessCell.swift in Sources */,
 				B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */,
 				B2F495CD1F16958E00361CE4 /* OptionsViewController.swift in Sources */,
@@ -434,9 +492,14 @@
 				B23963901F1ED5EE00384315 /* ImagePickerHelper.swift in Sources */,
 				B2E06DA01F2286ED00AFE7D3 /* Item.swift in Sources */,
 				B239638C1F1EBB9A00384315 /* StoreOptionViewController.swift in Sources */,
+				B2E8D5AC1F2FD282009C3811 /* WalmartMapViewController.swift in Sources */,
+				B2B7D5161F34E8CC00FDAF65 /* PopUpViewController.swift in Sources */,
+				B2E8D5B01F2FF770009C3811 /* Location.swift in Sources */,
+				B2E8D5EE1F325825009C3811 /* searchViewController.swift in Sources */,
 				B2B60CB31F16D8640007B120 /* BusinessViewController.swift in Sources */,
 				1BFC2E7E1BF1AA7300885EBB /* AppDelegate.swift in Sources */,
 				B23963851F1E89FC00384315 /* WalmartViewController.swift in Sources */,
+				B2E8D5A81F2BA6E0009C3811 /* Review.swift in Sources */,
 				B21E65FA1F192BA5002B7CFE /* PageViewController.swift in Sources */,
 				B23963921F1FFE4500384315 /* YelpApiHelper.swift in Sources */,
 				B21E65FC1F192C2E002B7CFE /* MapViewController.swift in Sources */,
@@ -595,6 +658,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = imagepicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -617,6 +681,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = imagepicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

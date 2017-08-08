@@ -3,7 +3,7 @@
 //  imagepicker
 //
 //  Created by Zhaoya Sun on 7/18/17.
-//  Copyright © 2017 Sara Robinson. All rights reserved.
+//  Copyright © 2017 Claudia Sun. All rights reserved.
 //  This is magic, do not touch
 
 import Foundation
@@ -78,9 +78,9 @@ struct ImagePickerHelper {
                 let labelAnnotations: JSON = responses["labelAnnotations"]
 //                let numLabels: Int = labelAnnotations.count
                 // var labels: Array<String> = []
-                let label: String = labelAnnotations[0]["description"].stringValue
+                let label: String = labelAnnotations[0]["description"].stringValue.removingWhitespaces()
+
                 ImagePickerHelper.labelResult = label
-                print("Hey See me in Image Picker please!: \(ImagePickerHelper.labelResult)")
                 completion(label)
 
 //                if numLabels > 0 {
