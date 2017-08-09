@@ -40,7 +40,7 @@ class MicrophoneViewController: UIViewController {
 //        imageViewBackground.contentMode = UIViewContentMode.scaleAspectFill
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "microphone")!)
-        self.view.contentMode = UIViewContentMode.center
+        self.view.contentMode = UIViewContentMode.scaleAspectFill
 
         speechToText = SpeechToText(
             username: Credentials.SpeechToTextUsername,

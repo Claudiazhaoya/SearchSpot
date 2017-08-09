@@ -20,7 +20,6 @@ struct YelpApiHelper {
     //    static func getBusinesses(completion: @escaping (Bool) -> ()) {
     static func getBusinesses(location: String, searchKey: String, completion: @escaping (Bool) -> ()) {
         let query = YLPQuery(location: location)
-        print("searchKey in Yelper: \(searchKey)")
         query.term = searchKey
         //        query.limit = 50
         YLPClient.authorize(withAppId: appId, secret: appSecret) { (client, error) in
@@ -38,7 +37,6 @@ struct YelpApiHelper {
                         self.businesses.removeAll()
                         if !topBusiness!.isEmpty {
                             for business in topBusiness! {
-                                print(business)
                                 self.businesses.append(business)
                             }
                             completion(true)

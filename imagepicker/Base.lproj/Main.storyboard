@@ -320,7 +320,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csA-YC-PGY">
                                 <rect key="frame" x="71" y="389" width="232" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.3803921569" green="0.75479792176111116" blue="0.92941176469999998" alpha="0.36451198630136988" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.75479792176111116" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Icon-App-76x76-5"/>
                                 <connections>
                                     <action selector="WalmartButtonTapped:" destination="FCD-xj-rcv" eventType="touchUpInside" id="ike-Rm-7Ni"/>
@@ -330,7 +330,7 @@
                                 <rect key="frame" x="71" y="67" width="237" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -351,7 +351,7 @@
         <!--Spotsearch-->
         <scene sceneID="v5y-5B-wHh">
             <objects>
-                <viewController id="iO5-18-O8e" customClass="MicrophoneViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iO5-18-O8e" customClass="SpeechToTextViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rdW-8U-MeB"/>
                         <viewControllerLayoutGuide type="bottom" id="KQW-Ny-RVu"/>
@@ -362,7 +362,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I am listening..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W5t-yp-Hb5">
                                 <rect key="frame" x="58" y="82" width="259" height="235"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="0.34516802226027393" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -375,7 +375,7 @@
                                 </constraints>
                                 <state key="normal" image="Icon-App-76x76-3"/>
                                 <connections>
-                                    <action selector="didPressMicrophoneButton:" destination="iO5-18-O8e" eventType="touchUpInside" id="FMl-Px-RkJ"/>
+                                    <action selector="recordButtonTapped" destination="iO5-18-O8e" eventType="touchUpInside" id="zY7-9H-51u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -392,8 +392,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Spotsearch" id="NHO-1J-vJw"/>
                     <connections>
-                        <outlet property="microphoneButton" destination="2ld-Xd-odw" id="ZDc-TB-t5R"/>
-                        <outlet property="textView" destination="W5t-yp-Hb5" id="c3L-zD-nLk"/>
+                        <outlet property="recordButton" destination="2ld-Xd-odw" id="PUJ-yL-Qsm"/>
+                        <outlet property="textView" destination="W5t-yp-Hb5" id="HKA-xT-JUU"/>
                         <segue destination="FCD-xj-rcv" kind="show" identifier="transferToStores" id="Uvi-c6-dsE"/>
                     </connections>
                 </viewController>
@@ -828,7 +828,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="503"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hqE-tJ-Jiv" id="V9i-xp-aPc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="503"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="502.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="salePrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyx-XL-M62">

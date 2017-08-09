@@ -27,7 +27,6 @@ struct WalmartReviewApiHelper {
             case .success:
                 if let value = response.result.value {
                     let reviewData = JSON(value)
-                    print(reviewData)
                     self.reviews.removeAll()
                     // Do what you need to with JSON here!
                     // The rest is all boiler plate code you'll use for API requests

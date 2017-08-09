@@ -41,17 +41,20 @@ class WalmartViewController: UIViewController, CLLocationManagerDelegate {
         DispatchQueue.global(qos: .userInitiated).async {
             WalmartApiHelper.getWalmartBusiness(searchKey: self.searchKey, completion: { didComplete in
                 if didComplete {
-                self.items = WalmartApiHelper.items
-                DispatchQueue.main.async {
-                    self.itemTableView.reloadData()
-                    self.spinner.stopAnimating()
-                }
+                    self.items = WalmartApiHelper.items
+                    print(self.items.count)
+                    DispatchQueue.main.async {
+                        self.itemTableView.reloadData()
+                        self.spinner.stopAnimating()
+                    }
                 } else {
-                    let alert = UIAlertController(title: "Error!", message: "Businesses Not Found", preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                    self.spinner.stopAnimating()
+                    self.items = []
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Error!", message: "Businesses Not Found", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        self.spinner.stopAnimating()
+                    }
                 }
             })
         }
@@ -86,7 +89,7 @@ class WalmartViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func homeButtonTapped(_ sender: UIBarButtonItem) {
         navigationController?.popToRootViewController(animated: true)
     }
-   
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
             let cell = sender as! ItemCell
@@ -155,7 +158,7 @@ extension WalmartViewController: UISearchResultsUpdating {
 }
 
 extension WalmartViewController: UISearchBarDelegate {
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }

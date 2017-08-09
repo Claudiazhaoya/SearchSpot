@@ -91,20 +91,23 @@ class BusinessViewController: UIViewController, CLLocationManagerDelegate, MKMap
                     YelpApiHelper.getBusinesses(location: self.address!, searchKey: self.searchKey, completion: { didComplete in
                         
                         if didComplete {
-                        self.businesses = YelpApiHelper.businesses
-                        DispatchQueue.main.async {
-                            self.businessTableView.reloadData()
-                            self.spinner.stopAnimating()
-                        }
+                            self.businesses = YelpApiHelper.businesses
+                            DispatchQueue.main.async {
+                                self.businessTableView.reloadData()
+                                self.spinner.stopAnimating()
+                            }
                         } else {
                             self.businesses = []
-                            let alert = UIAlertController(title: "Error!", message: "Businesses Not Found", preferredStyle: .alert)
-                            
-                            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                            self.spinner.stopAnimating()
+                            DispatchQueue.main.async {
+                                let alert = UIAlertController(title: "Error!", message: "Businesses Not Found", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                                self.spinner.stopAnimating()
+                            }
                             
                         }
+                        
                     })
                 })
                 

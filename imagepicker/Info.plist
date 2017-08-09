@@ -2,15 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Do you allow Spotsearch to access to your microphone?</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Do you allow Spotsearch to access to your current location?</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -33,10 +24,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Do you allow Spotsearch to access to your camera?</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Do you allow Spotsearch to access to your current location?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Do you allow Spotsearch to access to your current location?</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Do you allow Spotsearch to access to your microphone?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Do you allow Spotsearch to access to your albums?</string>
 	<key>UILaunchStoryboardName</key>
