@@ -37,12 +37,10 @@ class WalmartViewController: UIViewController, CLLocationManagerDelegate {
         if searchKey == "" {
             searchKey = ImagePickerHelper.labelResult!
         }
-        print("Search:\(searchKey)")
         DispatchQueue.global(qos: .userInitiated).async {
             WalmartApiHelper.getWalmartBusiness(searchKey: self.searchKey, completion: { didComplete in
                 if didComplete {
                     self.items = WalmartApiHelper.items
-                    print(self.items.count)
                     DispatchQueue.main.async {
                         self.itemTableView.reloadData()
                         self.spinner.stopAnimating()
@@ -111,8 +109,8 @@ class WalmartViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 vc.locations = self.locations
             }
-        } else if segue.identifier == "home" {
-            
+//        } else if segue.identifier == "home" {
+//            
         }
         
     }
@@ -124,7 +122,6 @@ class WalmartViewController: UIViewController, CLLocationManagerDelegate {
     //get user's current location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.first
-        //        print(location!.coordinate)
         self.latitude = location!.coordinate.latitude
         self.longitude = location!.coordinate.longitude
         coordinate = location!.coordinate

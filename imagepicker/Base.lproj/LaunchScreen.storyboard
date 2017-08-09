@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,24 +22,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-G9-JQS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Z-dy-rG5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotsearch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag6-9h-z7M">
-                                <rect key="frame" x="58" y="299" width="260" height="71"/>
+                                <rect key="frame" x="57" y="298" width="260" height="71"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.76078431372549016" green="0.55686274509803924" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ag6-9h-z7M" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9YU-8U-kfg"/>
-                            <constraint firstItem="3qp-G9-JQS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Amb-bM-6p8"/>
-                            <constraint firstItem="Ag6-9h-z7M" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HAv-tv-ZQx"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="3qp-G9-JQS" secondAttribute="bottom" id="Lop-45-vFa"/>
-                            <constraint firstAttribute="trailing" secondItem="3qp-G9-JQS" secondAttribute="trailing" id="POS-Lo-Qq0"/>
-                            <constraint firstItem="3qp-G9-JQS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Zff-Ld-neM"/>
+                            <constraint firstItem="Y6Z-dy-rG5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="D8e-aU-1gR"/>
+                            <constraint firstItem="Ag6-9h-z7M" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="278" id="Jth-ua-R9q"/>
+                            <constraint firstItem="Ag6-9h-z7M" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="41" id="Keo-NL-Kd1"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Ag6-9h-z7M" secondAttribute="bottom" constant="298" id="Knj-rR-Lf9"/>
+                            <constraint firstAttribute="trailing" secondItem="Y6Z-dy-rG5" secondAttribute="trailing" id="Ukf-8S-7me"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ag6-9h-z7M" secondAttribute="trailing" constant="42" id="VPJ-ux-jys"/>
+                            <constraint firstItem="Y6Z-dy-rG5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZJf-gq-hop"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Y6Z-dy-rG5" secondAttribute="bottom" id="ZbB-M7-qV5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="564" height="887"/>
+        <image name="testimg.jpg" width="2265" height="3426"/>
     </resources>
 </document>

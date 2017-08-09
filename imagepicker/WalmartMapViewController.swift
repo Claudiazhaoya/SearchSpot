@@ -15,7 +15,6 @@ class WalmartMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     let locationManager = CLLocationManager()
     var latitude: Double?
     var longitude: Double?
-    //    var coordinate: CLLocationCoordinate2D?
     var locations = [Location]()
     
     @IBOutlet weak var WalmartMapView: MKMapView!
@@ -29,8 +28,6 @@ class WalmartMapViewController: UIViewController, CLLocationManagerDelegate, MKM
         
         //        locationManager.startUpdatingLocation()
         self.WalmartMapView.delegate = self
-        let count = locations.count
-        print("locations number + \(count)")
 
     
         for location in locations {
@@ -39,8 +36,6 @@ class WalmartMapViewController: UIViewController, CLLocationManagerDelegate, MKM
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             annotation.title = location.name
-            //            print(coordinates)
-            //            print(business.name)
             self.WalmartMapView.addAnnotation(annotation)
             
         }
@@ -52,30 +47,19 @@ class WalmartMapViewController: UIViewController, CLLocationManagerDelegate, MKM
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
- 
-//        prepareForRepresentation(of: coordinate)
+
         if let location = locations.first {
             let span = MKCoordinateSpanMake(1.7, 1.7)
             let region = MKCoordinateRegionMake(location.coordinate, span)
             WalmartMapView.setRegion(region, animated: false)
         }
 
-//        self.setUpRepresentRegionOnMap(withLatitude: lattitude, longitude: longitude)
-
-        //        displayLocation(coordinate: currentLocation!)
         locationManager.stopUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     
-    
-//    func setUpRepresentRegionOnMap(withLatitude latitude: CLLocationDegrees, longitude: CLLocationDegrees, latitudeDelta: CLLocationDegrees = 0.01, longitudeDelta: CLLocationDegrees = 0.01) {
-//        
-//        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-//
-//        prepareForRepresentation(of: coordinate)
-//    }
     
     private func prepareForRepresentation (of coordinate: CLLocationCoordinate2D) {
         let annotation:MKPointAnnotation = MKPointAnnotation()

@@ -19,8 +19,6 @@ class StoreOptionViewController: UIViewController {
         super.viewDidLoad()
         changeShape(button: YelpButton)
         changeShape(button: WalmartButton)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "store")!)
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
     }
     
     override func didReceiveMemoryWarning() {

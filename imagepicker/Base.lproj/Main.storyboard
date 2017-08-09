@@ -24,13 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMB-qT-9zl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.10854559075342465" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinMap" translatesAutoresizingMaskIntoConstraints="NO" id="Gk3-Xi-rOh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dV3-rN-Rc9">
                                 <rect key="frame" x="71" y="110" width="232" height="502.5"/>
                                 <subviews>
@@ -102,14 +98,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PMB-qT-9zl" firstAttribute="height" secondItem="fYc-W6-2vM" secondAttribute="height" id="De4-d4-Yy4"/>
+                            <constraint firstItem="Gk3-Xi-rOh" firstAttribute="leading" secondItem="fYc-W6-2vM" secondAttribute="leading" id="52J-Ld-gKI"/>
                             <constraint firstItem="zTd-Ze-Gif" firstAttribute="top" secondItem="dV3-rN-Rc9" secondAttribute="bottom" constant="54.5" id="GHs-TA-8pj"/>
-                            <constraint firstItem="PMB-qT-9zl" firstAttribute="centerX" secondItem="fYc-W6-2vM" secondAttribute="centerX" id="PnR-As-Dr2"/>
                             <constraint firstItem="dV3-rN-Rc9" firstAttribute="top" secondItem="OaI-Fl-KHp" secondAttribute="bottom" constant="46" id="XGX-nu-nsT"/>
-                            <constraint firstItem="PMB-qT-9zl" firstAttribute="width" secondItem="fYc-W6-2vM" secondAttribute="width" id="cFu-J0-YlN"/>
+                            <constraint firstItem="zTd-Ze-Gif" firstAttribute="top" secondItem="Gk3-Xi-rOh" secondAttribute="bottom" id="YJt-he-vc8"/>
+                            <constraint firstItem="Gk3-Xi-rOh" firstAttribute="top" secondItem="OaI-Fl-KHp" secondAttribute="bottom" id="cYx-v8-8Ld"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dV3-rN-Rc9" secondAttribute="trailing" constant="56" id="euc-m0-LLH"/>
-                            <constraint firstItem="PMB-qT-9zl" firstAttribute="centerY" secondItem="fYc-W6-2vM" secondAttribute="centerY" id="njD-Ff-GEB"/>
                             <constraint firstItem="dV3-rN-Rc9" firstAttribute="leading" secondItem="fYc-W6-2vM" secondAttribute="leadingMargin" constant="55" id="wqP-dJ-WQb"/>
+                            <constraint firstAttribute="trailing" secondItem="Gk3-Xi-rOh" secondAttribute="trailing" id="yne-c7-Kto"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AfS-jU-ctz"/>
@@ -125,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOU-Qg-kjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="923"/>
+            <point key="canvasLocation" x="756" y="922.48875562218893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAK-pL-CgW">
@@ -135,7 +131,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zmQ-XF-amW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.34901960784313724" green="0.1764705882352941" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -146,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="-310" y="924"/>
         </scene>
-        <!--SPOT-->
+        <!--Spotsearch-->
         <scene sceneID="56b-GM-LKF">
             <objects>
-                <viewController id="Eqi-eC-qmH" customClass="BusinessViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Spotsearch" id="Eqi-eC-qmH" customClass="BusinessViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oh0-sC-ZEZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xPz-9d-N21"/>
@@ -270,7 +266,7 @@
                         <color key="backgroundColor" red="0.87912384139999999" green="1" blue="0.72512023069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="SPOT" id="e4Z-k9-Dhy">
+                    <navigationItem key="navigationItem" title="Spotsearch" id="e4Z-k9-Dhy">
                         <rightBarButtonItems>
                             <barButtonItem image="mapButton-1" id="i74-PZ-7H9">
                                 <connections>
@@ -306,6 +302,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="store" translatesAutoresizingMaskIntoConstraints="NO" id="jWU-Ct-2CX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-O4-A3D">
                                 <rect key="frame" x="71" y="237" width="232" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -335,6 +334,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jWU-Ct-2CX" firstAttribute="leading" secondItem="5wz-xk-jN1" secondAttribute="leading" id="mvE-tT-zOO"/>
+                            <constraint firstItem="jWU-Ct-2CX" firstAttribute="top" secondItem="M0n-Gd-5wM" secondAttribute="bottom" id="ueg-WJ-Za0"/>
+                            <constraint firstItem="SdF-yr-wDd" firstAttribute="top" secondItem="jWU-Ct-2CX" secondAttribute="bottom" id="vqb-Cg-BNs"/>
+                            <constraint firstAttribute="trailing" secondItem="jWU-Ct-2CX" secondAttribute="trailing" id="xEp-d8-juX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Spotsearch" id="9DR-Yt-VLR"/>
                     <connections>
@@ -373,7 +378,8 @@
                                     <constraint firstAttribute="height" constant="147" id="diu-ZE-PuS"/>
                                     <constraint firstAttribute="width" constant="147" id="tGJ-Rk-1vx"/>
                                 </constraints>
-                                <state key="normal" image="Icon-App-76x76-3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Start recording"/>
                                 <connections>
                                     <action selector="recordButtonTapped" destination="iO5-18-O8e" eventType="touchUpInside" id="zY7-9H-51u"/>
                                 </connections>
@@ -476,6 +482,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="searchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-nZ-7kA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spotsearch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4X-W0-gMO">
                                 <rect key="frame" x="71" y="165" width="232" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -512,7 +522,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaW-qw-ExN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311" y="1667"/>
+            <point key="canvasLocation" x="-280.80000000000001" y="1839.1304347826087"/>
         </scene>
         <!--Spotsearch-->
         <scene sceneID="Ucb-ib-75b">
@@ -661,10 +671,10 @@
             </objects>
             <point key="canvasLocation" x="4124" y="734"/>
         </scene>
-        <!--SPOT-->
+        <!--Spotsearch-->
         <scene sceneID="wIh-iz-jPR">
             <objects>
-                <viewController id="xfH-dh-qgu" customClass="WalmartViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Spotsearch" id="xfH-dh-qgu" customClass="WalmartViewController" customModule="imagepicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9o5-a5-8vQ"/>
                         <viewControllerLayoutGuide type="bottom" id="o8v-W8-qTK"/>
@@ -783,7 +793,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.87912384139999999" green="1" blue="0.72512023069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SPOT" id="Yvy-0r-lYi">
+                    <navigationItem key="navigationItem" title="Spotsearch" id="Yvy-0r-lYi">
                         <rightBarButtonItems>
                             <barButtonItem image="Icon-App-29x29@1x-1" id="j7z-mW-pvh">
                                 <connections>
@@ -1035,8 +1045,11 @@
         <image name="Icon-App-76x76-5" width="76" height="76"/>
         <image name="Icon-App-76x76-6" width="76" height="76"/>
         <image name="mapButton-1" width="30" height="30"/>
+        <image name="pinMap" width="2576" height="3456"/>
+        <image name="searchBackground" width="2493" height="3456"/>
+        <image name="store" width="2505" height="3456"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uvi-c6-dsE"/>
+        <segue reference="BZa-KW-mkx"/>
     </inferredMetricsTieBreakers>
 </document>

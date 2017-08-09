@@ -58,8 +58,6 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
         if segue.identifier == "option" {
             let destination = segue.destination as? StoreOptionViewController
             destination?.image = selectedImage
-//        } else if segue.identifier == "search" {
-//        } else if segue.identifier == "speechToText" {
         }
     }
     
@@ -71,8 +69,6 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pinMap.png")!)
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
         imagePicker.delegate = self
         changeShape(button: cameraButton)
         changeShape(button: loadImageButton)
@@ -86,17 +82,12 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     //get the image from either source type
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //            imageView.contentMode = .scaleAspectFit
-            //            imageView.image = pickedImage
             self.selectedImage = pickedImage
             if picker.sourceType == .camera {
                 UIImageWriteToSavedPhotosAlbum(self.selectedImage!, nil, nil, nil);
             }
             let binaryImageData = ImagePickerHelper.base64EncodeImage(selectedImage!)
             ImagePickerHelper.createRequest(with: binaryImageData, completion: { (detectedItem) in
-                
-                
-                //            let label = ImagePickerHelper.labelResult
                 self.performSegue(withIdentifier: "option", sender: self)
             })
         }

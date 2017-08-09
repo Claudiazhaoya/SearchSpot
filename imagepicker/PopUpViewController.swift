@@ -32,7 +32,6 @@ class PopUpViewController: UIViewController {
 
     @IBAction func goBackPopUpButtonTapped(_ sender: UIButton) {
         self.removeAnimate()
-//        self.view.removeFromSuperview()
     }
     
     @IBAction func goToStoreButtonTapped(_ sender: UIButton) {

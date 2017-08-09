@@ -29,11 +29,9 @@ struct WalmartMapHelper {
                     // Do what you need to with JSON here!
                     // The rest is all boiler plate code you'll use for API requests
                     let allocationsData = locationData.arrayValue
-                    print("allocationData: \(allocationsData.count)")
                     for location in allocationsData {
                         self.locations.append(Location(json: location))
                     }
-                    print("locations in helper function: \(self.locations.count)")
                     completion(locations)
                 }
             case .failure(let error):

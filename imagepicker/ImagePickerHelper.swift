@@ -39,7 +39,6 @@ struct ImagePickerHelper {
                 //                self.labelResults.text = "Error code \(errorObj["code"]): \(errorObj["message"])"
             } else {
                 // Parse the response
-                print(json)
                 let responses: JSON = json["responses"][0]
                 
                 // Get face annotations

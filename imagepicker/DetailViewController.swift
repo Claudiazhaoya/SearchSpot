@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import WalmartSDKKit
 import Kingfisher
 
 class DetailViewController: UIViewController {
@@ -70,13 +69,6 @@ extension DetailViewController: UITableViewDataSource {
             }
             return cell
             
-        case 3:
-            let cell: ReviewCell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
-            WalmartReviewApiHelper.itemId = item?.itemId
-            
-            return cell
-            
-            
         default:
             //            fatalError("Error: unexpected indexPath.")
             print(indexPath)
@@ -96,8 +88,6 @@ extension DetailViewController: UITableViewDelegate {
             return FreeShipCell.height
         case 2:
             return DescriptionCell.height
-        case 3:
-            return ReviewCell.height
 
         default:
             fatalError()

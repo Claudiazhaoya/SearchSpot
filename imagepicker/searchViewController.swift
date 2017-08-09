@@ -15,8 +15,6 @@ class searchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pinImage-1")!)
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
