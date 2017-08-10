@@ -34,7 +34,6 @@ struct Location {
         self.phoneNumber = json["phoneNumber"].stringValue
         self.sundayOpen = json["sundayOpen"].boolValue
         self.timezone = json["timezone"].stringValue
-        
     }
 
 }

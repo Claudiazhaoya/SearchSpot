@@ -26,14 +26,7 @@ struct ImagePickerHelper {
             // Use SwiftyJSON to parse results
             let json = JSON(data: dataToParse)
             let errorObj: JSON = json["error"]
-            //
-            //            self.spinner.stopAnimating()
-            //            selimageViewer.isHidden = true
-            //            self.labelResults.isHidden = false
-            //            self.faceResults.isHidden = false
-            //            self.faceResults.text = ""
-            
-            // Check for errors
+                // Check for errors
             if (errorObj.dictionaryValue != [:]) {
                 print("Error code \(errorObj["code"]): \(errorObj["message"])")
                 //                self.labelResults.text = "Error code \(errorObj["code"]): \(errorObj["message"])"
@@ -41,39 +34,7 @@ struct ImagePickerHelper {
                 // Parse the response
                 let responses: JSON = json["responses"][0]
                 
-                // Get face annotations
-                //                let faceAnnotations: JSON = responses["faceAnnotations"]
-                //                if faceAnnotations != nil {
-                //                    let emotions: Array<String> = ["joy", "sorrow", "surprise", "anger"]
-                //
-                //                    let numPeopleDetected:Int = faceAnnotations.count
-                //
-                //                    self.faceResults.text = "People detected: \(numPeopleDetected)\n\nEmotions detected:\n"
-                
-                //                    var emotionTotals: [String: Double] = ["sorrow": 0, "joy": 0, "surprise": 0, "anger": 0]
-                //                    var emotionLikelihoods: [String: Double] = ["VERY_LIKELY": 0.9, "LIKELY": 0.75, "POSSIBLE": 0.5, "UNLIKELY":0.25, "VERY_UNLIKELY": 0.0]
-                //
-                //                    for index in 0..<numPeopleDetected {
-                //                        let personData:JSON = faceAnnotations[index]
-                //
-                //                        // Sum all the detected emotions
-                //                        for emotion in emotions {
-                //                            let lookup = emotion + "Likelihood"
-                //                            let result:String = personData[lookup].stringValue
-                //                            emotionTotals[emotion]! += emotionLikelihoods[result]!
-                //                        }
-                //                    }
-                // Get emotion likelihood as a % and display in UI
-                //                    for (emotion, total) in emotionTotals {
-                //                        let likelihood:Double = total / Double(numPeopleDetected)
-                //                        let percent: Int = Int(round(likelihood * 100))
-                //                        self.faceResults.text! += "\(emotion): \(percent)%\n"
-                //                    }
-                //                } else {
-                //                    self.faceResults.text = "No faces found"
-                //                }
-                
-                // Get label annotations
+               // Get label annotations
                 let labelAnnotations: JSON = responses["labelAnnotations"]
 //                let numLabels: Int = labelAnnotations.count
                 // var labels: Array<String> = []
@@ -81,51 +42,9 @@ struct ImagePickerHelper {
 
                 ImagePickerHelper.labelResult = label
                 completion(label)
-
-//                if numLabels > 0 {
-                    //                    var labelResultsText:String = "Labels found: "
-//                    for index in 0..<numLabels {
-//                        let label = labelAnnotations[index]["description"].stringValue
-//                        print("Hey See me in Image Picker please!: \(label)")
-//                        self.labels.append(label)
-//                    }
-                    //                    for label in self.labels {
-                    //                        // if it's not the last item add a comma
-                    //                        if self.labels[self.labels.count - 1] != label {
-                    //                            labelResultsText += "\(label), "
-                    //                        } else {
-                    //                            labelResultsText += "\(label)"
-                    //                        }
-                    //                    }
-                    //self.labelResults.text = labelResultsText
-                    //                    self.performSegue(withIdentifier: "Yelp", sender: self)
-//                } else {
-                    //                    self.labelResults.text = "No labels found"
-//                    print("No labels found")
-//                }
             }
         })
     }
-    
-    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    //        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-    //            imageView.contentMode = .scaleAspectFit
-    //            imageView.isHidden = true // You could optionally display the image here by setting imageView.image = pickedImage
-    //            spinner.startAnimating()
-    //            faceResults.isHidden = true
-    //            labelResults.isHidden = true
-    //
-    //            // Base64 encode the image and create the request
-    //            let binaryImageData = base64EncodeImage(pickedImage)
-    //            createRequest(with: binaryImageData)
-    //        }
-    //
-    //        dismiss(animated: true, completion: nil)
-    //    }
-    //
-    //    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    //        dismiss(animated: true, completion: nil)
-    //    }
     
     static func resizeImage(_ imageSize: CGSize, image: UIImage) -> Data {
         UIGraphicsBeginImageContext(imageSize)

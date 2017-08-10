@@ -17,6 +17,7 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var loadImageButton: UIButton!
     @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var selectedImage:UIImage?
     //select the image source from camera
@@ -81,6 +82,7 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     //get the image from either source type
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        spinner.startAnimating()
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.selectedImage = pickedImage
             if picker.sourceType == .camera {
@@ -88,10 +90,10 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             let binaryImageData = ImagePickerHelper.base64EncodeImage(selectedImage!)
             ImagePickerHelper.createRequest(with: binaryImageData, completion: { (detectedItem) in
+                self.spinner.stopAnimating()
                 self.performSegue(withIdentifier: "option", sender: self)
             })
         }
-        
         dismiss(animated: true, completion: nil)
     }
     //deal with the cancel situation

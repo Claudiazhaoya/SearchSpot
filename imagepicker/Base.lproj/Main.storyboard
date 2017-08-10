@@ -95,6 +95,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-dG-B5G">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.76078431369999999" green="0.5568627451" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -102,8 +106,12 @@
                             <constraint firstItem="zTd-Ze-Gif" firstAttribute="top" secondItem="dV3-rN-Rc9" secondAttribute="bottom" constant="54.5" id="GHs-TA-8pj"/>
                             <constraint firstItem="dV3-rN-Rc9" firstAttribute="top" secondItem="OaI-Fl-KHp" secondAttribute="bottom" constant="46" id="XGX-nu-nsT"/>
                             <constraint firstItem="zTd-Ze-Gif" firstAttribute="top" secondItem="Gk3-Xi-rOh" secondAttribute="bottom" id="YJt-he-vc8"/>
+                            <constraint firstItem="zTd-Ze-Gif" firstAttribute="top" secondItem="NRS-dG-B5G" secondAttribute="bottom" constant="315" id="ab0-uf-C5R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NRS-dG-B5G" secondAttribute="trailing" constant="153" id="bCj-sL-hbj"/>
                             <constraint firstItem="Gk3-Xi-rOh" firstAttribute="top" secondItem="OaI-Fl-KHp" secondAttribute="bottom" id="cYx-v8-8Ld"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dV3-rN-Rc9" secondAttribute="trailing" constant="56" id="euc-m0-LLH"/>
+                            <constraint firstItem="NRS-dG-B5G" firstAttribute="leading" secondItem="fYc-W6-2vM" secondAttribute="leadingMargin" constant="153" id="ljn-Ja-Jnp"/>
+                            <constraint firstItem="NRS-dG-B5G" firstAttribute="top" secondItem="OaI-Fl-KHp" secondAttribute="bottom" constant="251" id="qjb-8i-42V"/>
                             <constraint firstItem="dV3-rN-Rc9" firstAttribute="leading" secondItem="fYc-W6-2vM" secondAttribute="leadingMargin" constant="55" id="wqP-dJ-WQb"/>
                             <constraint firstAttribute="trailing" secondItem="Gk3-Xi-rOh" secondAttribute="trailing" id="yne-c7-Kto"/>
                         </constraints>
@@ -113,6 +121,7 @@
                         <outlet property="cameraButton" destination="AiE-h2-wyw" id="qka-lg-Bo6"/>
                         <outlet property="loadImageButton" destination="BpS-Hn-N4v" id="m82-N6-2dU"/>
                         <outlet property="searchButton" destination="6NZ-Om-EBX" id="5tF-wK-pIP"/>
+                        <outlet property="spinner" destination="NRS-dG-B5G" id="7Lw-jH-uKJ"/>
                         <outlet property="voiceButton" destination="QRm-km-xvN" id="t7W-j0-Q8J"/>
                         <segue destination="FCD-xj-rcv" kind="show" identifier="option" id="IzR-aT-IdN"/>
                         <segue destination="Bdc-Xt-4UY" kind="show" identifier="search" id="bY8-V0-eVO"/>
@@ -1105,6 +1114,6 @@
         <image name="store" width="2505" height="3456"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uvi-c6-dsE"/>
+        <segue reference="IzR-aT-IdN"/>
     </inferredMetricsTieBreakers>
 </document>
