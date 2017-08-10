@@ -42,9 +42,6 @@ public class SpeechToTextViewController: UIViewController, SFSpeechRecognizerDel
         recordButton.isEnabled = false
         recordButton.layer.masksToBounds = true
         recordButton.layer.cornerRadius = recordButton.frame.width/2
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "microphone")!)
-        self.view.contentMode = UIViewContentMode.scaleAspectFill
-        
     }
     
     override public func viewDidAppear(_ animated: Bool) {
