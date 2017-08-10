@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func addToCartButtonTapped(_ sender: UIButton) {
-        UIApplication.shared.openURL(URL(string: (item?.addToCartUrl)!)!)
+        UIApplication.shared.open(URL(string: (item?.addToCartUrl)!)!, options: [:], completionHandler: nil)
         
     }
     

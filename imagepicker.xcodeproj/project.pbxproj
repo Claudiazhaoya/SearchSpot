@@ -25,6 +25,7 @@
 		B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6A1F27BFA5004423F3 /* FreeShipCell.swift */; };
 		B23C8C6D1F27BFBB004423F3 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C8C6C1F27BFBB004423F3 /* DescriptionCell.swift */; };
 		B27536311F3BC57D0082A263 /* testimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B27536301F3BC57D0082A263 /* testimg.jpg */; };
+		B27536331F3CDA850082A263 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27536321F3CDA850082A263 /* PageContentViewController.swift */; };
 		B2B60CB31F16D8640007B120 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB21F16D8640007B120 /* BusinessViewController.swift */; };
 		B2B60CB61F16EADC0007B120 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B60CB51F16EADC0007B120 /* BusinessCell.swift */; };
 		B2B60CBA1F1836C10007B120 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B60CB91F1836C10007B120 /* MapKit.framework */; };
@@ -90,6 +91,7 @@
 		B247428A1F33F27700913A0C /* SpeechToTextV1.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SpeechToTextV1.framework.dSYM; path = Carthage/Build/iOS/SpeechToTextV1.framework.dSYM; sourceTree = "<group>"; };
 		B247428C1F34D97900913A0C /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		B27536301F3BC57D0082A263 /* testimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testimg.jpg; sourceTree = "<group>"; };
+		B27536321F3CDA850082A263 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
 		B2B60CB21F16D8640007B120 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		B2B60CB51F16EADC0007B120 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		B2B60CB91F1836C10007B120 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -268,6 +270,7 @@
 				B2E8D5ED1F325825009C3811 /* searchViewController.swift */,
 				B2B7D5151F34E8CC00FDAF65 /* PopUpViewController.swift */,
 				B2B7D51F1F3B6B4E00FDAF65 /* SpeechToTextViewController.swift */,
+				B27536321F3CDA850082A263 /* PageContentViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				B23C8C6B1F27BFA5004423F3 /* FreeShipCell.swift in Sources */,
 				B2F495CD1F16958E00361CE4 /* OptionsViewController.swift in Sources */,
 				B23963941F1FFE5600384315 /* WalmartApiHelper.swift in Sources */,
+				B27536331F3CDA850082A263 /* PageContentViewController.swift in Sources */,
 				B23963901F1ED5EE00384315 /* ImagePickerHelper.swift in Sources */,
 				B2E06DA01F2286ED00AFE7D3 /* Item.swift in Sources */,
 				B239638C1F1EBB9A00384315 /* StoreOptionViewController.swift in Sources */,
@@ -649,6 +653,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = imagepicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ClaudiaSun20.spotsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,6 +678,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = imagepicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ClaudiaSun20.spotsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

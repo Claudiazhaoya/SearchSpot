@@ -68,29 +68,22 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
     
     @IBAction func websiteButtonTapped(_ sender: Any) {
-        UIApplication.shared.openURL((info?.url)!)
+        UIApplication.shared.open((info?.url)!, options: [:], completionHandler: nil)
     }
     
     @IBAction func phoneNumberTapped(_ sender: UIButton) {
-        
         guard let info = info else {
             print("error")
             return
         }
-        if info.phone != nil {
+        if info.phone != "" {
             if let url = URL(string: "tel://\(info.phone!)"), UIApplication.shared.canOpenURL(url) {
-                if #available(iOS 10, *) {
-                    UIApplication.shared.open(url)
-                } else {
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(url)
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                }
+                
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -136,11 +129,11 @@ class PageViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         let longitude = info?.location.coordinate?.longitude
         print(longitude!)
         self.setUpRepresentRegionOnMap(withLatitude: latitude!, longitude: longitude!)
-
+        
         locationManager.stopUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-               print(error.localizedDescription)
+        print(error.localizedDescription)
     }
 }
 

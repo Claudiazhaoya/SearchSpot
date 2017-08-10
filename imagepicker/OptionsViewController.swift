@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+import AVFoundation
+import Photos
 
 class OptionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let imagePicker = UIImagePickerController()
@@ -23,23 +25,93 @@ class OptionViewController: UIViewController, UIImagePickerControllerDelegate, U
     //select the image source from camera
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         UIView.transition(with: cameraButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
-            self.imagePicker.allowsEditing = false
-            self.imagePicker.sourceType = .camera
+            self.checkCamera()
         })
-        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func checkCamera() {
+        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
         
+        switch authStatus {
+        case .authorized:
+            
+            setupCamera()
+            
+        case .denied:
+            goToSettings()
+        default:
+            setupCamera()
+        }
+        
+    }
+    
+    func setupCamera() {
+        
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.sourceType = .camera
+        self.imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    func goToSettings() {
+        let alert = UIAlertController(title: "Error", message: "Camera access required", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "cancel", style: .default))
+        alert.addAction(UIAlertAction(title: "Settings", style: .cancel) { (alert) -> Void in
+                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+            
+            
+                // Fallback on earlier versions
+            
+            
+        })
+        present(alert, animated: true)
     }
     
     //select the image source from album
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
         UIView.transition(with: loadImageButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
-            sender.isUserInteractionEnabled = false
-            self.imagePicker.allowsEditing = false
-            self.imagePicker.sourceType = .photoLibrary
-            sender.isUserInteractionEnabled = true
+            self.checkPhotoLibrary()
         })
-        present(imagePicker, animated:  true, completion:  nil)
+        
     }
+    
+    func checkPhotoLibrary() {
+        let authStatus = PHPhotoLibrary.authorizationStatus()
+        
+        switch authStatus {
+        case .authorized:
+            
+            setupPhotoLibrary()
+            
+        case .denied:
+            goToPhotoLibrarySettings()
+        default:
+            setupPhotoLibrary()
+        }
+        
+    }
+    
+    func setupPhotoLibrary() {
+        
+        self.imagePicker.allowsEditing = false
+        self.imagePicker.sourceType = .photoLibrary
+        self.imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    func goToPhotoLibrarySettings() {
+        let alert = UIAlertController(title: "Error", message: "Photo album access required", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "cancel", style: .default))
+        alert.addAction(UIAlertAction(title: "Settings", style: .cancel) { (alert) -> Void in
+            
+                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+            
+            
+                // Fallback on earlier versions
+            
+            
+        })
+        present(alert, animated: true)
+    }
+
     
     @IBAction func speechToTextButtonTapped(_ sender: UIButton) {
         UIView.transition(with: voiceButton, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: { _ in
